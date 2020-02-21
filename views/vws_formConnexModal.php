@@ -20,11 +20,11 @@
 
           <div class="input_form input_form-connex_bkgd">
 
-            <label class="label_items_connex" for="mail">Votre email : </label>
-              <input type="email" name="email" id="mail" placeholder="johnDoe@mail.fr" required />
+            <label class="label_items_connex" for="email">Votre email : </label>
+              <input type="email" name="email" id="email" placeholder="johnDoe@mail.fr" required />
 
-            <label class="label_items_connex" for="pass">Votre mot de passe : <em>12 caractères maximum.</em></label>
-              <input type="password" name="password" id="pass" placeholder="mot de passe" title="Le mot de passe ne doit pas dépasser 12 caractères" required />
+            <label class="label_items_connex" for="word2pass">Votre mot de passe : <em>12 caractères maximum.</em></label>
+              <input type="password" name="password" id="word2pass" placeholder="mot de passe" title="Le mot de passe ne doit pas dépasser 12 caractères" required />
 
           </div>
           <br>

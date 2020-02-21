@@ -1,4 +1,3 @@
-
 # ```Back-End : PHP / PDO / SQL / Bdd```
 
 ## Transmission des données
@@ -117,3 +116,21 @@
                                  └> ../views/vws_userHome.php   <-| ../inc/inc_logOutUserConnex.php
                                     ../views/vws_404error.php
                                     ../index.php
+
+## Ressources
+
+> **Erreurs :**
+```
+Warning: Cannot modify header information - headers already sent by (output started at  
+ D:\Logiciels\laragon\www\tutoriels\Formulaires\#3-PDO_acces_bdd\TP_CRUD_SQL-simple_suite\views\vws_formRegistrationModal.php:1) in   
+ D:\Logiciels\laragon\www\tutoriels\Formulaires\#3-PDO_acces_bdd\TP_CRUD_SQL-simple_suite\Controllers\Ctrl_selectDatasForConnex.php on line 61
+```
+
+- https://www.grafikart.fr/tutoriels/headers-already-sent-871  
+
+- https://stackoverflow.com/questions/8028957/how-to-fix-headers-already-sent-error-in-php  
+
+```
+Corrigée dans le fichier -> \views\home.php :
+- L'erreur : require __DIR__ . '/../Controllers/Ctrl_selectDatasForConnex.php';
+```

@@ -1,5 +1,5 @@
-<?php
-  
+<?php  
+
   require_once __DIR__ . '/../inc/inc_connexBdd.php';
   // J'ai besoin de ma requête ici, je requiers le fichier qui la contient ici.
   require_once __DIR__ . '/../modeles/mod_sqlSelectDatasForConnex.php';
@@ -42,8 +42,8 @@
       if(!empty($password) && strlen($password) < 12 && $pwdVerify) {
 
         /*
-         j'active la session, Je stock en session le pseudo que je récupére de la Bdd. et je me relocalise sur la 
-         page d'un utilisateur.
+          j'active la session, Je stock en session le pseudo que je récupére de la Bdd. et je me relocalise sur la 
+          page d'un utilisateur.
         */
         session_start();
         $_SESSION['pseudo'] = $userConnex['pseudo'];
@@ -60,5 +60,5 @@
     }
 
   } else {    
-    header('Location: ../index.php');      
+    header('Location: ../index.php');         
   }
