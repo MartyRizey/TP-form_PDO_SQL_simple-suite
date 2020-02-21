@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  font-size: 100%
+}
+
+#wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+ul > li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+/* -------- Barre de Navigation -------- */
+#navBar,
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: silver;
+  /* border: 1px solid blue; */
+}
+
+#navBar_links {
+  /* border: 1px solid red; */
+  display: inline-flex;
+  width: 49.9%;
+}
+
+#navBar_login {
+  /* border: 1px solid red; */
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 49.9%;
+}
+
+#navBar_login .btn {
+  box-shadow: 1px 1px 2px black
+}
+
+#navBar_login .btn:hover {
+  color: yellow;
+}
+
+#navBar_login .btn:active {
+  box-shadow: 1px 1px 4px inset black;
+}
+
+#navBar_links ul,
+#navBar_login ul {
+  /* border: 1px solid green; */
+  display: inline-flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* -------- Home Page -------- */
+#home_page {
+  display: flex;
+  flex-direction: column;
+}
+
+.home_page-date {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+#home_page-title {
+  margin: 2em 0 2em 0;
+  text-align: center;
+}
+
+.home_page-resume {
+  text-align: justify;
+  font-family: sans-serif;
+  margin-bottom: 5em;
+}
+
+.home_page-resume em:nth-child(1),
+.home_page-resume em:nth-child(2),
+.home_page-resume em:nth-child(3) {
+  font-weight: bold;
+}
+
+.home_page-resume em:nth-child(1) {
+  color: #0069D9;
+}
+
+.home_page-resume em:nth-child(2) {
+  color: #138496;
+}
+
+.home_page-resume em:nth-child(3) {
+  color: green;
+}
+
+.home_page-message {
+  display: block;
+  width: 70%;
+  text-align: center;
+  margin: 1em auto;
+  border: 1px solid silver;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  text-shadow: 1px 1px 2px silver;
+}
+
+/* -------- Modal Formulaire -------- */
+.modal-body > form > .input_form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.modal-header > .modal-title-connex,
+.modal-body > form > .input_form > .label_items_connex {
+  color: #0069D9;
+}
+
+.modal-header > .modal-title-inscript,
+.modal-body > form > .input_form > .label_items_inscript {
+  color: #138496;
+}
+
+.modal-body > form > .input_form > label:nth-child(1) {
+  margin-top: 15px;
+}
+
+.modal-body > form > .input_form-connex_bkgd > input:focus {
+  background-color: rgba(112, 157, 240, 0.5);
+}
+
+.modal-body > form > .input_form-reg_bkgd > input:focus {
+  background-color: rgba(23, 155, 175, 0.5);
+}
+
+.modal-body > form > .input_form > input {
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+/* -------- 404 error break -------- */
+#error_page-warning {
+  display: flex;
+  justify-content: center;
+}
+
+.error_page-warning_img {
+  padding: 0.5em;
+  width: 100px;
+}
+
+.error_page-warning_subTitle {
+  align-self: center;
+}
+
+#error_page-title {
+  text-align: center;
+  padding: 0.7em;
+  color: red;
+  text-shadow: 1px 1px 2px silver;
+}
+
+#error_page-img {
+  display: flex;
+  justify-content: center;
+}
+
+.error_page-cta_return {
+  padding: 0.5em;
+  border: solid 1px blue;
+  border-radius: 5px;
+  margin-left: 1em;
+}
+
+/* -------- page perso utilisateur -------- */
+
+.user_page-title {
+  margin-top: 1.2em;
+}
+
+.user_page-btnDeconnexion,
+.return_cta {
+  margin: 2em 0 2em 0;
+}
+
+.user_page-btnDeconnexion {
+  border-radius: 5px;
+  padding: 0.1em 0.3em 0.2em 0.3em;
+  outline: none;  
+}
+
+.user_page-btnDeconnexion:hover {
+  color: gold;
+  text-shadow: 1px 1px 1px black;
+}
+
+.user_page-btnDeconnexion:active {
+  box-shadow: 2px 2px 4px inset gray;
+  outline: none;
+}
+
+.return_cta a {
+  padding: 0.5em;
+  border: solid 1px blue;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: blue;
+  color:  white;
+  box-shadow: 2px 2px 2px silver;
+  font-family: sans-serif;
+}
