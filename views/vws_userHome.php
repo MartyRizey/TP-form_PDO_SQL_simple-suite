@@ -5,6 +5,7 @@
   require_once '../inc/inc_logOutUserConnex.php';
   require_once __DIR__ . '/tpl_doctype.php';
   require_once __DIR__ . '/tpl_header.php';
+  require_once __DIR__ . '/../inc/path_directory.php';
 
   /*
    je vérifie que mon password et mon email en SESSION existent ...
@@ -34,10 +35,18 @@
       </button>
     </form>
 
+    <!-- <div class="return_cta"><a href=<?= HOMEPAGE; ?>> Retour</a></div> -->
+
+
   <?php else: //header('Location: ../index.php'); ?>
 
     <!-- Attention ce bouton ne me déconnecte pas de ma session personnelle -->
-    <div class="return_cta"><a href="../index.php"> Retour</a></div>
+
+    <h2 class="user_page-title">Vous n'êtes plus connecté à votre compte.</h2>
+    <div class="return_cta">       
+      <a href="../index.php"> Retour</a>     
+    </div>
+    
 
   <?php endif; ?>    
 

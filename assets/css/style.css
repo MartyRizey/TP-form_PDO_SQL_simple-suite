@@ -27,20 +27,17 @@ footer {
   display: flex;
   justify-content: space-between;
   background-color: silver;
-  /* border: 1px solid blue; */
 }
 
-#navBar_links {
-  /* border: 1px solid red; */
+#navBar_links,
+#navBar_login {
+  align-self: center;
   display: inline-flex;
   width: 49.9%;
 }
 
 #navBar_login {
-  /* border: 1px solid red; */
-  display: inline-flex;
-  justify-content: flex-end;
-  width: 49.9%;
+  justify-content: flex-end;   
 }
 
 #navBar_login .btn {
@@ -57,10 +54,31 @@ footer {
 
 #navBar_links ul,
 #navBar_login ul {
-  /* border: 1px solid green; */
   display: inline-flex;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+#navBar_links ul li {
+  align-self: center;
+  border: rgb(70, 95, 143) 1px dotted;
+  border-radius: 0.3em;
+  padding: 0.3em 0.5em;
+  margin: 0.5em;
+}
+
+#navBar_links ul li:hover {
+  box-shadow: 1px 1px 5px inset gold;
+  border: 1px gold solid;  
+  cursor: pointer;
+}
+
+#navBar_links ul li a {
+  text-decoration: none;    
+}
+
+#navBar_links ul li:hover a {    
+  color: gold;    
 }
 
 /* -------- Home Page -------- */

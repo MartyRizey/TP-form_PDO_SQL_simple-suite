@@ -3,6 +3,7 @@
   require_once __DIR__ . '/../inc/inc_connexBdd.php';
   // J'ai besoin de ma requête ici, je requiers le fichier qui la contient ici.
   require_once __DIR__ . '/../modeles/mod_sqlSelectDatasForConnex.php';
+  require_once __DIR__ . '/../inc/path_directory.php';
 
   // je récupére les données de mon formulaire de connexion du fichier vws_formConnexModal.php
   $email    = trim(filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL, FILTER_SANITIZE_FULL_SPECIAL_CHARS));
@@ -47,7 +48,7 @@
         */
         session_start();
         $_SESSION['pseudo'] = $userConnex['pseudo'];
-        header('Location: ../views/vws_userHome.php');
+        header('Location:' . USERPAGE);
         exit;
 
       } else {

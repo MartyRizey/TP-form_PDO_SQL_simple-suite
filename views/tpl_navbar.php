@@ -1,13 +1,14 @@
 <?php
   require_once __DIR__ . '\vws_formConnexModal.php';
   require_once __DIR__ . '\vws_formRegistrationModal.php';
+  require_once __DIR__ . '\..\inc\path_directory.php';
 ?>
 
 <nav id="navBar">
 
   <div id="navBar_links">
     <ul>
-      <li><a href="#">Link_1</a></li>
+      <li><a href=<?= ROOTPATH . 'index.php'; ?>>Home</a></li>
       <li><a href="#">Link_2</a></li>
     </ul>
   </div>
@@ -20,14 +21,14 @@
           L'attribut data-target="#myModal" ici fonction comme une ancre et appel
           l'attribut avec l'id="myModal" dans le fichier requis ligne 2.
           -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalConnexion">Connexion</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalConnexion" title="Pour vous connectez, vous devez être inscrit.">Connexion</button>
       </li>
       <li>
         <!--
           Pour utiliser un second modal voilà la structure que j'ai trouvé...
           Ajouter une balise avec l'attribut 'data-toggle' dans la balise <button>
         -->
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalInscription">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalInscription" title="">
           <a data-toggle="modal">Inscription</a>
         </button>
       </li>

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 /**
  * https://www.php.net/manual/fr/function.ini-set.php
  * https://www.php.net/manual/fr/errorfunc.configuration.php#ini.display-errors
