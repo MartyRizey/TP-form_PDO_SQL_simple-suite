@@ -1,6 +1,7 @@
 <?php
   require_once __DIR__ . '\vws_formConnexModal.php';
   require_once __DIR__ . '\vws_formRegistrationModal.php';
+  require_once __DIR__ . '\..\inc\inc_logOutUserConnex.php'; 
   require_once __DIR__ . '\..\inc\path_directory.php';   
 ?>
 
@@ -40,11 +41,16 @@
           Ici si dans le tableau $_SESSION la clé 'pseudo' existe et si elle n'est pas vide alors j'affiche le bouton 'logOut'.
           -->
         <?php if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])): ?>
-
-          <button type="button" class="btn btn-danger"><span>LogOut</span></button>
+          <!-- 
+            A la soumission du formulaire j'appel ma fonction 'logOutUser()' qui est dans le fichier inc_logOutUserConnex.php .
+            Je lui passe en paramètre le pseudo stocké dans ma $_SESSION. Cela permettra de déconnecter la personne de sa Session en cours.            
+            -->
+          <form action="" method="POST">
+            <button type="submit" class="btn btn-danger" name="logoutBtn" value="<?php logOutUser($_SESSION['pseudo']); ?>"><span>LogOut</span></button>          
+          </form>
 
         <?php endif; ?>   
-             
+
       </li>
 
     </ul>
