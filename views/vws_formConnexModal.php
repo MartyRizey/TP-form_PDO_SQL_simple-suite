@@ -1,5 +1,7 @@
 <!-- Après avoir cliqué sur le bouton 'Connexion' dans la NavBar j'arrive ici -->
 
+<?php require __DIR__ .'/../inc/path_directory.php'; ?>
+
 <!-- The Modal -->
 <div class="modal" id="modalConnexion">
   <div class="modal-dialog">
@@ -14,7 +16,7 @@
       <!-- Modal body -->
       <div class="modal-body">
       <!-- Je transmet les données saisies dans le fichier Ctrl_selectDatasForConnex.php -->
-        <form action="Controllers/Ctrl_selectDatasForConnex.php" method="POST">
+        <form action=<?= CTRL_PAGE . "Ctrl_selectDatasForConnex.php"; ?> method="POST">
 
           <!-- <input type="hidden" name="userId" value="" /> -->
 

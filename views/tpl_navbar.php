@@ -1,7 +1,7 @@
 <?php
   require_once __DIR__ . '\vws_formConnexModal.php';
   require_once __DIR__ . '\vws_formRegistrationModal.php';
-  require_once __DIR__ . '\..\inc\path_directory.php';
+  require_once __DIR__ . '\..\inc\path_directory.php';   
 ?>
 
 <nav id="navBar">
@@ -27,11 +27,26 @@
         <!--
           Pour utiliser un second modal voilà la structure que j'ai trouvé...
           Ajouter une balise avec l'attribut 'data-toggle' dans la balise <button>
-        -->
+          -->
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalInscription" title="">
           <a data-toggle="modal">Inscription</a>
         </button>
       </li>
+
+      <li>
+
+        <!-- 
+          https://www.php.net/manual/fr/control-structures.alternative-syntax.php 
+          Ici si dans le tableau $_SESSION la clé 'pseudo' existe et si elle n'est pas vide alors j'affiche le bouton 'logOut'.
+          -->
+        <?php if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])): ?>
+
+          <button type="button" class="btn btn-danger"><span>LogOut</span></button>
+
+        <?php endif; ?>   
+             
+      </li>
+
     </ul>
   </div>
 

@@ -48,7 +48,7 @@
         */
         session_start();
         $_SESSION['pseudo'] = $userConnex['pseudo'];
-        header('Location:' . USERPAGE);
+        header('Location: ../index.php');
         exit;
 
       } else {
