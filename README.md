@@ -11,6 +11,11 @@
 
 #### ```Fonctionnalitées à ajouter```
 
+  > _**Session Utilisateur**_
+
+   - [x] Faire en sorte de se souvenir de la personne connectée en utilisant les `sessions`.
+   - [x] Créer un bouton de `logOut` dans la barre de navigation qui apparait quand un utilisateur est connecté.
+
   > _**Formulaire d'inscription.**_
 
    - [ ] Ajouter un message quand on est redirigé vers la page index :
@@ -39,83 +44,57 @@
 
   ---
 
-- Branche **master**  
+- Branche **master**
 
-        └> Ajout de la Bdd.
-        └> Arborescence de fichiers et dossiers simple.
+    └> Arborescence de fichiers et dossiers simple.
+    └> Arborescence des dossiers type MVC.  
 
-             ----------------------
-             | Bouton Inscription |
-             ----------------------                
-                 |
-              => vws_formRegistrationModal.php
-                 |                                     | inc_connexBdd.php
-                 └> Ctrl_insertDatasRegistration.php <-| mod_sqlSelectDatasReg.php                                 
-                     |                                 | mod_sqlInsertDatasReg.php
-                     |
-                     └> index.php
-                        vws_404error.php
+        <> index.php                                       <-| views/home.php
+            |
+            |                                                | views/tpl_doctype.php                                                                        <-| assets/css/style.css
+            views/home.php                                 <-| views/tpl_header.php                                                                         <-| views/tpl_navbar.php
+            |                                                | views/tpl_footer.php                                                                                 
+            |                                                
+            |                                                | views/vws_formConnexModal.php        >> Controllers/Ctrl_insertDatasRegistration.php         <-| /../inc/path_directory.php                
+        => views/tpl_navbar.php                            <-| views/vws_formRegistrationModal.php  >> Controllers/Ctrl_insertDatasRegistration.php
+            |                                                | /../inc/inc_logOutUserConnex.php
+            |                                                | /../inc/path_directory.php
+            |
+            |
+        ======================
+        | Bouton Inscription |
+        ======================               
+            |
+            => views/vws_formRegistrationModal.php
+            |                                                 | inc/inc_connexBdd.php                                                                       <-| inc/inc_configBdd.php
+            └> Controllers/Ctrl_insertDatasRegistration.php <-| modeles/mod_sqlSelectDatasReg.php                                 
+                            |                                 | modeles/mod_sqlInsertDatasReg.php
+                            |
+                            └> ../index.php
+                                ../views/vws_404error.php
 
-                            ------------------------------------------------------------                      
 
-              => tpl_navbar.php                     <-| vws_formConnexionModal.php        
-                  |
-              --------------------              
-              | Bouton Connexion |
-              --------------------                 
-                  |
-               => vws_formConnexionModal.php
-                  |
-                  └> Ctrl_selectDatasForConnex.php   <-| inc_connexBdd.php
-                      |                                | mod_sqlSelectDatasForConnex.php
-                      |
-                      └> vws_userHome.php            <-| inc_logOutUserConnex.php
-                         vws_404error.php
-                         index.php                         
+                                -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- Branche **modifs**
 
-        └> Arborescence de fichiers et dossiers simple.
-        └> Arborescence des dossiers type MVC.  
-
-            <> index.php                                       <-| views/home.php
-                |
-                |                                                | views/doctype.php                                    <-| assets/css/style.css
-               views/home.php                                  <-| views/header.php                                     <-| tpl_navbar.php
-                |                                                | ../Controllers/Ctrl_selectDatasForConnex.php         <-| inc/inc_connexBdd.php
-                |                                                                                                         | modeles/mod_sqlSelectDatasForConnex.php                                            
-                |                                                | views.footer.php 
-                |
-            => views/tpl_navbar.php                            <-| views/vws_formRegistrationModal.php
-                |
-            ======================
-            | Bouton Inscription |
-            ======================               
-                |
-             => views/vws_formRegistrationModal.php
-                |                                                 | inc/inc_connexBdd.php
-                └> Controllers/Ctrl_insertDatasRegistration.php <-| modeles/mod_sqlSelectDatasReg.php                                 
-                                |                                 | modeles/mod_sqlInsertDatasReg.php
-                                |
-                                └> ../index.php
-                                   ../views/vws_404error.php
-
-                                   ---------------------------------------------------------------------------------------------------------------------------------------------
-
-             => views/tpl_navbar.php                           <-| views/vws_formConnexionModal.php
-                  |
-             ====================              
-             | Bouton Connexion |
-             ====================
-                 |
-              => views/vws_formConnexionModal.php
-                 |                                                
-                 └> Controllers/Ctrl_selectDatasForConnex.php   <-| inc/inc_connexBdd.php
-                                 |                                | modeles/mod_sqlSelectDatasForConnex.php                                                           
-                                 |
-                                 └> ../views/vws_userHome.php   <-| ../inc/inc_logOutUserConnex.php
-                                    ../views/vws_404error.php
-                                    ../index.php
+            |                                                | views/vws_formConnexModal.php        >> Controllers/Ctrl_insertDatasRegistration.php         <-| /../inc/path_directory.php                
+        => views/tpl_navbar.php                            <-| views/vws_formRegistrationModal.php  >> Controllers/Ctrl_insertDatasRegistration.php
+            |                                                | /../inc/inc_logOutUserConnex.php
+            |                                                | /../inc/path_directory.php
+            |
+            |
+        ====================              
+        | Bouton Connexion |
+        ====================
+            |
+        => views/vws_formConnexionModal.php                  | /../inc/path_directory.php
+            |                                                
+            └> Controllers/Ctrl_selectDatasForConnex.php   <-| inc/inc_connexBdd.php                                                                        <-| inc/inc_configBdd.php
+                            |                                | modeles/mod_sqlSelectDatasForConnex.php   
+                            |                                | /../inc/path_directory.php                                                         
+                            |
+                            └> ../views/vws_404error.php
+                               ../index.php
 
 ## Ressources
 
