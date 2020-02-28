@@ -1,6 +1,6 @@
 <!-- Après avoir cliqué sur le bouton 'Connexion' dans la NavBar j'arrive ici -->
 
-<?php require __DIR__ .'/../inc/path_directory.php'; ?>
+<?php require_once __DIR__ .'/../inc/path_directory.php'; ?>
 
 <!-- The Modal -->
 <div class="modal" id="modalConnexion">

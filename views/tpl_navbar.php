@@ -1,8 +1,8 @@
 <?php
-  require_once __DIR__ . '\vws_formConnexModal.php';
-  require_once __DIR__ . '\vws_formRegistrationModal.php';
-  require_once __DIR__ . '\..\inc\inc_logOutUserConnex.php'; 
-  require_once __DIR__ . '\..\inc\path_directory.php';   
+  require_once __DIR__ . '/vws_formConnexModal.php';
+  require_once __DIR__ . '/vws_formRegistrationModal.php';
+  require_once __DIR__ . '/../inc/inc_logOutUserConnex.php'; 
+  require_once __DIR__ . '/../inc/path_directory.php';   
 ?>
 
 <nav id="navBar">

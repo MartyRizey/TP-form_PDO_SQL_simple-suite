@@ -1,5 +1,5 @@
 <?php 
-  require_once __DIR__ . '\tpl_doctype.php'; 
+  require_once __DIR__ . '/tpl_doctype.php'; 
 ?>
 
 <section id="error_page">

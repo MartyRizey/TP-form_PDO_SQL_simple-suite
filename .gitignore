@@ -1,0 +1,2 @@
+# Exclure des commit de Git le fichier ci-dessous
+inc/inc_configBdd.php
