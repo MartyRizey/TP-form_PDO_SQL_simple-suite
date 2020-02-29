@@ -7,14 +7,14 @@
 
 <nav id="navBar">
 
-  <div id="navBar_links">
+  <div class="navBar_links">
     <ul>
       <li><a href=<?= ROOTPATH . 'index.php'; ?>>Home</a></li>
       <li><a href="#">Link_2</a></li>
     </ul>
   </div>
 
-  <div id="navBar_login">
+  <div class="navBar_login">
     <ul>
       <li>
         <!--

@@ -39,7 +39,11 @@
       */
       $pwdVerify = password_verify($password, $userConnex['passHash']);
 
-      // Si le champ passeword du formulaire n'est pas vide et que $pwdVerif retourne 1.je rentre dans la condition.
+      /* 
+         - Si le champ passeword du formulaire n'est pas vide et que $pwdVerif retourne 1.je rentre dans la condition.
+         - L'option de ne pouvoir rentrer un password plus long que 13, n'est pas forcement nécessaire, c'est juste pour 
+           moi histoire d'utiliser strlen() et d'utiliser un opérateur de comparaison.
+      */
       if(!empty($password) && strlen($password) < 12 && $pwdVerify) {
 
         /*
