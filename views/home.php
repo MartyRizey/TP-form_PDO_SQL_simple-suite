@@ -1,5 +1,5 @@
 <?php
-  
+
   require __DIR__ . '/tpl_doctype.php';
   require __DIR__ . '/tpl_header.php';  
   /*

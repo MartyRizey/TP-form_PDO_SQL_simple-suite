@@ -1,2 +1,2 @@
-# Exclure des 'add' de Git le fichier ci-dessous
+# Exclure des 'add' de Git, le fichier ci-dessous. C'est à dire que le fichier ne sera pas ajouté aux fichiers à commiter.
 inc/inc_configBdd.php

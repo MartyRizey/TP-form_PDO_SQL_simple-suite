@@ -1,0 +1,42 @@
+
+url rewriting, sur un dossier public et faire un controlleur qui appele un autre controlleur
+
+
+Donc je résumre les point a corriger : 
+--------------------------------------
+
+ [OK] - méthode BEM CSS, éviter les id en css (Vu, certains 'id' corigés en 'class', à voir méthode BEM)
+
+ [OK] - hachage pas de limite à 13 caractères (Vu, je garde comme cela pour le moment)
+
+ [OK] - require_once plutôt que require.
+
+ [OK] - URL avec des '\' remplacer par les '/'
+
+ - éviter les URL en absolute (sauf pour faire montrer sur un site externe).
+      |
+      └> url absolute (https://www/...), on part de la racine du projet.
+         url relative, c'est relatif à l'endroit on on se trouve. 
+            |
+            └> Ex, je suis à D et je veux aller à F. le chemin passe par E pour accèder à F.
+                   Si je veux aller à A, il faut que je remonte le chemin vers C, puis B pour accèder à A.
+
+ - sécuriser l'application en interdisant les fichiers (URL rewriting) côté serveur. Seul le dossier public est visible.
+    |
+    └> https://www.webrankinfo.com/dossiers/techniques/tutoriel-url-rewriting
+       https://github.com/O-clock-Alumni/fiches-recap/blob/master/ldc/apache.md
+
+ [OK] - faire une .gitignore** pour masqué les mot de passe de connexion lors du dev
+       |
+       └> https://openclassrooms.com/fr/courses/1233741-gerez-vos-codes-source-avec-git
+          https://perhonen.fr/blog/2015/03/exclure-fichiers-depot-git-gitignore-1476
+          https://git-scm.com/docs/git-rm
+          https://emmanuelballery.com/blog/2016-11-01-supprimer-des-fichiers-d-un-depot-git
+
+
+ En cours ... Créé une procédure d'installation dans le README.md
+
+
+ 
+
+ 

@@ -36,12 +36,13 @@ if(isset($pseudo) && !empty($pseudo)){
       l'utilisateur.
     - Pour accèder à la propriété de mon objet j'utilise la '->'. ex: objet->propriété, cela permet d'accèder à la valeur contenue 
       dans la propriété.
-    - Si le speudo récupéré de la Bdd est strictement égale au pseudo saisi, donc qu'il existe.
+    - Si le speudo récupéré de la Bdd est strictement égale au pseudo saisi, donc il existe.
   */
   if(!empty($selectPseudoInBdd->pseudo) === $pseudo){
 
     // Je redirige vers la page index.php.
-    header('Location: ../index.php');
+    header('Location: ../public/index.php');
+    exit();
 
     // Sinon j'exécute le code ci-dessous.
   } else {
@@ -67,7 +68,7 @@ if(isset($pseudo) && !empty($pseudo)){
         sqlInsertDatasReg($connectBdd, $pseudo, $birthday, $email, $pwdHash);
 
         // une fois ceci fait je redirige vers index.php
-        header('Location: ../index.php');
+        header('Location: ../public/index.php');
         exit();
 
       } else {
